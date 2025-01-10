@@ -1,0 +1,15 @@
+list1=[]
+dict1={}
+
+size=int(input("Enter number of firstnames to be added:"))
+for i in range(size):
+    fnames=input("Enter firstname {i+1}:")
+    list1.append(fnames)
+
+for i in list1:
+    count=i.lower().count('a')
+    dict[i]=count
+     
+print("First names:",list1)
+print("Number of occurence of 'a':",dict1)
+print("Total occurence of 'a':",sum(dict1.values())
