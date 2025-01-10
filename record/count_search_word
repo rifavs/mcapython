@@ -1,0 +1,8 @@
+sentence=int(input("Enter a sentence:"))
+word_list=sentence.split(" ")
+print("Number of words in the sentence:",len(word_list))
+word=int(input("Enter a word to be searched:"))
+if word in word_list:
+    print(f"The word {word} is in the sentence")
+else:
+    print(f"The word {word} is not in the sentence")
