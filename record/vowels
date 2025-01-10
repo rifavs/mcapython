@@ -1,0 +1,10 @@
+string=input("Enter a string:")
+vowels=["a","e","i","o","u","A","E","I","O","U"]
+found=[]
+for i in string:
+    if i in vowels:
+        found.append(i)
+if found:
+    print("Vowels are ",found)
+else:
+    print("No vowels are found")
