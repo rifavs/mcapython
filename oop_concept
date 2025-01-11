@@ -1,0 +1,48 @@
+class String_function:
+    def __init__(self,string):
+        self.string=string
+
+    def reverse_string(self):
+        reversed_string=""
+        for char in self.string:
+            reversed_string=char+reversed_string
+        return(reversed_string)
+
+    def is_palindrome(self):
+        rev_string=""
+        for char in self.string:
+            rev_string=char+rev_string
+        if rev_string==self.string:
+            print(f"{self.string} is palindrome")
+        else:
+            print(f"{self.string} is not palindrome")
+
+    def count_vowels(self):
+        vowels='aeiouAEIOU'
+        count=0
+        for char in self.string:
+            if char in vowels:
+                count+=1
+        return(count)
+
+def main():
+    string_input=input("Enter a string:")
+    string_obj=String_function(string_input)
+    while True:
+        print("\nMenu:\n")
+        print("\n1. Check palindrome \n2. Count vowels \n3. Reverse string \n4. Exit")
+        choice=int(input("Enter your choice:"))
+        if choice==1:
+            string_obj.is_palindrome()
+        elif choice==2:
+            print("Number of vowels:",string_obj.count_vowels())
+        elif choice==3:
+            print("Reverse of string:",string_obj.reverse_string())
+        elif choice==4:
+            print("Exiting the program...")
+            break
+        else:
+            print("invalid choice")
+
+main()
+       
