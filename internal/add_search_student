@@ -1,0 +1,36 @@
+class Student:
+    def __init__(self):
+        self.MCAS1=[]
+        self.MCAS3=[]
+
+    def add_toMCAS1(self,student_name):
+        if len(self.MCAS1) == 3:
+            self.MCAS1.insert(3, student_name)
+            print(f"{student_name} added to MCAS1 at index 3.")
+        else:
+            print("Cannot add student. MCAS1 does not have exactly 3 students.")
+            
+    def search(self,student_name):
+        if student_name in self.MCAS1:
+            print(f"{student_name} is found in MCAS1.")
+        else:
+            print(f"{student_name} is not found in MCAS1.")
+
+    def display(self):
+        all_students=self.MCAS1 + self.MCAS3
+        print("All Students:", all_students)
+
+student=Student()
+
+student.MCAS1 = ["Alice", "Bob", "Charlie"]
+student.MCAS3 = ["Dave", "Eve"]
+
+print("Add student")
+student.add_toMCAS1("Henna")
+
+print("Search for a student")
+student.search("Bob")
+student.search("Adhi")
+
+
+student.display()
