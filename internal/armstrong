@@ -1,0 +1,22 @@
+def read_number():
+    number=int(input("Enter a number:"))
+    return(number)
+
+def armstrong(number):
+    num_str=str(number)
+    num_digits=len(num_str)
+    sum_powers=0
+    for digit in num_str:
+        sum_powers+=int(digit)**num_digits
+
+    if sum_powers==number:
+        print(f"{number} is Armstrong number")
+    else:
+        print(f"{number} is not Armstrong number")
+
+def main():
+    number=read_number()
+    armstrong(number)
+    
+main()    
+    
