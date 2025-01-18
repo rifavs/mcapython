@@ -1,0 +1,13 @@
+list1=[]
+size=int(input("Enter the size of list:"))
+for i in range(size):
+    words=input(f"Enter a word {i+1}:")
+    list1.append(words)
+max_length=0
+long_word=""
+for word in list1:
+    if len(word) > max_length:
+        max_length = len(word)
+        longest_word = word
+
+print(f"The longest word is '{longest_word}' with a length of {max_length}.")
