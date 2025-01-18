@@ -1,0 +1,12 @@
+student = {}
+size = int(input("Enter the number of students: "))
+
+for i in range(size):
+    name = input("Enter student's name: ")
+    mark = int(input("Enter student's mark: "))
+    student[name] = mark
+    
+sorted_student = dict(sorted(student.items(), reverse=True))
+
+print("Sorted dictionary in descending order of names:")
+print(sorted_student)
