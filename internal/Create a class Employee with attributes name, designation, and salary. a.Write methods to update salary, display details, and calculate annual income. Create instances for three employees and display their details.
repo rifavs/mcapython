@@ -1,0 +1,40 @@
+class Employee:
+    def __init__(self,name,designation,salary):
+        self.name=name
+        self.designation=designation
+        self.salary=salary
+
+    def update_salary(self,new_salary):
+        self.salary=new_salary
+        print(f"Salary updated to {self.salary}")
+
+    def display_details(self):
+        print(f"Name:{self.name}")
+        print(f"Designation:{self.designation}")
+        print(f"Salary:{self.salary}")
+
+    def annual_income(self):
+        return self.salary*12
+
+employee1=Employee("Rifa","Software Engineer",200000)
+employee2=Employee("Athila","Software Developer",10000)
+employee3=Employee("Muhsi","Software Tester",20000)
+
+print("Employee 1 Details:")
+employee1.display_details()
+print(f"Annual Income: {employee1.annual_income()}\n")
+
+print("Employee 2 Details:")
+employee2.display_details()
+print(f"Annual Income: {employee2.annual_income()}\n")
+
+print("Employee 3 Details:")
+employee3.display_details()
+print(f"Annual Income: {employee3.annual_income()}\n")
+
+print("Updating Salary for Employee 1:")
+employee1.update_salary(55000)
+
+print("\nUpdated Employee 1 Details:")
+employee1.display_details()
+print(f"Annual Income: {employee1.annual_income()}")
