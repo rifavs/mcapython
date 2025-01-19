@@ -1,24 +1,25 @@
 import math
 
-def even(number):
-    for i in str(number):
-        if int(i) % 2 != 0:  
+def even(num):  
+    for digit in str(num):
+        if int(digit) % 2 != 0:  
             return False
     return True
 
-def perfect_digit(start, end):
+def generate_numbers(start, end):
     result = []
+
     for num in range(start, end + 1):
-        square = num * num
-        if square >= 1000 and even(square):
-            result.append(square)
+        sqrt_num = int(math.sqrt(num))
+        if sqrt_num * sqrt_num == num and even(num):
+            result.append(num)
+            
     return result
 
-start = int(input("Enter the start of the range: "))
-end = int(input("Enter the end of the range: "))
+start = 1000
+end = 9999
+numbers = generate_numbers(start, end)
 
-
-perfect_squares =perfect_digit(start, end)
-
-print("Perfect squares with all even digits:", perfect_squares)
+print("Four-digit numbers with all even digits and are perfect squares:")
+print(numbers)
 
